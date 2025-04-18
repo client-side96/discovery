@@ -1,14 +1,19 @@
 {{define "page"}}
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{{template "title" .}} - Dominic Frey</title>
-  </head>
-  <body>
-    <main>
-      {{template "body" .}}
-    </main>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>{{template "title" .}} - Dominic Frey</title>
+
+  <link rel="stylesheet" href="/static/tailwind.css">
+</head>
+
+<body>
+  <main>
+    {{template "body" .}}
+  </main>
+</body>
+
 </html>
 {{end}}

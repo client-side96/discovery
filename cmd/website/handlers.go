@@ -17,8 +17,8 @@ func homeHandler(res http.ResponseWriter, req *http.Request) {
 	}
 
 	files := []string{
-		"./html/home.page.tmpl",
-		"./html/page.layout.tmpl",
+		"./html/home.page.html.tmpl",
+		"./html/page.layout.html.tmpl",
 	}
 
 	tmpl, err := template.ParseFiles(files...)
