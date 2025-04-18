@@ -5,7 +5,7 @@ import (
 	"text/template"
 )
 
-func homeHandler(res http.ResponseWriter, req *http.Request) {
+func (app *application) homeHandler(res http.ResponseWriter, req *http.Request) {
 	if req.URL.Path != "/" {
 		http.NotFound(res, req)
 		return
@@ -17,8 +17,8 @@ func homeHandler(res http.ResponseWriter, req *http.Request) {
 	}
 
 	files := []string{
-		"./html/home.page.html.tmpl",
-		"./html/page.layout.html.tmpl",
+		app.htmlDir + "/home.page.html.tmpl",
+		app.htmlDir + "/page.layout.html.tmpl",
 	}
 
 	tmpl, err := template.ParseFiles(files...)
