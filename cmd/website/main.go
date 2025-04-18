@@ -16,5 +16,10 @@ func homeHandler(res http.ResponseWriter, req *http.Request) {
 		return
 	}
 
+	if req.Method != http.MethodGet {
+		http.Error(res, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
 	res.Write([]byte("Hello world"))
 }
