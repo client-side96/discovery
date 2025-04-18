@@ -16,7 +16,12 @@ func homeHandler(res http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	tmpl, err := template.ParseFiles("./html/home.page.tmpl")
+	files := []string{
+		"./html/home.page.tmpl",
+		"./html/page.layout.tmpl",
+	}
+
+	tmpl, err := template.ParseFiles(files...)
 	if err != nil {
 		http.Error(res, "Internal error", http.StatusInternalServerError)
 		return
