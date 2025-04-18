@@ -10,10 +10,19 @@
 </head>
 
 <body>
+
+  {{template "header" .}}
+
+  {{template "navigation" .}}
+
   <main>
     {{template "body" .}}
   </main>
+
+  {{template "footer" .}}
+
 </body>
+
 
 </html>
 {{end}}
