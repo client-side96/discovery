@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@theme {
+  --color-background-500: oklch(19.49% 0.069 273.31);
+  --color-surface-500: oklch(85.53% 0.035 276.66);
+  --color-primary-500: oklch(65.76% 0.176 251.2);
+  --color-accent-500: oklch(82.02% 0.278 142.38);
+  --color-muted-500: oklch(62.22% 0.08 275.47);
+}
+
+@layer base {
+  a {
+    @apply text-primary-500;
+    cursor: pointer;
+  }
+}

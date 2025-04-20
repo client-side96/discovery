@@ -7,15 +7,16 @@
   <title>{{template "title" .}} - Dominic Frey</title>
 
   <link rel="stylesheet" href="/static/tailwind.css">
+  <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
 </head>
 
-<body>
+<body class="bg-background-500 text-surface-500">
 
   {{template "header" .}}
 
   {{template "navigation" .}}
 
-  <main>
+  <main class="px-8 py-10">
     {{template "body" .}}
   </main>
 
